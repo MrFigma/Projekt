@@ -1,0 +1,23 @@
+.footer {
+  height: 100px;
+  display: flex;                    
+  justify-content: space-between;   
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.footer-lankar {
+  display: flex;
+  gap: 24px;                        
+}
+
+.footer-lankar a {
+  color: white;
+  text-decoration: none;            
+}
+
+.footer-lankar a:hover {
+  text-decoration: underline;
+}
