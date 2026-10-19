@@ -9,7 +9,7 @@ function Footer() {
         <p>© {år} Mr.Figma</p>
       <div className="footer-lankar">
         <Link to="/">Hem</Link>
-        <Link to="/om-mig">Om mig</Link>
+        <a href="https://www.linkedin.com/in/markus-andersson-863908313/">LinkedIn</a>
         <a href="https://github.com/MrFigma">Github</a>
       </div>
     </footer>
