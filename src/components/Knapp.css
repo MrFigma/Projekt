@@ -1,13 +1,18 @@
 .knapp {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px;
-  border-radius: 8px;
-  background-color: #1e293b;
-  color: white;
-  text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: #3e3a4e;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .knapp:hover {
-  background-color: #334155;
+    background-color: #8c8b92;
+}
+
+.knapp:focus-visible {
+    outline: 3px solid #3e3a4e;
+    outline-offset: 4px;
 }

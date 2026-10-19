@@ -2,13 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  margin: 0 auto;
+  padding: 32px 64px;
 }
 
 .kontakt-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
 @media (max-width: 800px) {

@@ -1,4 +1,6 @@
-import "./Kontakt.css"
+import "./Kontakt.css";
+
+import Knapp from "../components/Knapp";
 
 
 function Kontakt() {
@@ -19,7 +21,7 @@ function Kontakt() {
         <label htmlFor="meddelande">Meddelande</label>
         <textarea id="meddelande" name="meddelande" rows="5" />
         
-        <button type="submit">Skicka</button>
+        <Knapp type="submit">Skicka</Knapp>
       </form>
     </section>
   );

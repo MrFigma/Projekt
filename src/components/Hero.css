@@ -44,25 +44,6 @@
     line-height: 1.7;
 }
 
-.hero-knapp {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
-    background-color: #3e3a4e;
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.hero-knapp:hover {
-    background-color: #8c8b92;
-}
-
-.hero-knapp:focus-visible {
-    outline: 3px solid #3e3a4e;
-    outline-offset: 4px;
-}
-
 @media (max-width: 800px) {
     .hero {
         grid-template-columns: 1fr;
