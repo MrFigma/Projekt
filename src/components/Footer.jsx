@@ -10,7 +10,7 @@ function Footer() {
       <div className="footer-lankar">
         <Link to="/">Hem</Link>
         <Link to="/om-mig">Om mig</Link>
-        <a href="#Github">Github</a>
+        <a href="https://github.com/MrFigma">Github</a>
       </div>
     </footer>
   );

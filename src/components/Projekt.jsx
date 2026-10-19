@@ -3,7 +3,7 @@ import ProjektKort from "./ProjektKort";
 import bild1 from "../assets/hero3.jpg";
 import bild2 from "../assets/hero4.jpg";
 import bild3 from "../assets/hero5.jpg";
-import bild4 from "../assets/hero6.jpg"
+import bild4 from "../assets/hero6.jpg";
 
 function Projekt() {
   return (

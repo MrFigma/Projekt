@@ -1,5 +1,5 @@
-import "./OmMig.css"
-import heroBild from "../assets/hero7.jpg"
+import "./OmMig.css";
+import heroBild from "../assets/hero7.jpg";
 
 function OmMig() {
   return (

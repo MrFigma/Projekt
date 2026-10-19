@@ -19,7 +19,7 @@ function Kontakt() {
         <input type="email" id="epost" name="epost" placeholder="name@exempel.se"/>
 
         <label htmlFor="meddelande">Meddelande</label>
-        <textarea id="meddelande" name="meddelande" rows="5" />
+        <textarea id="meddelande" name="meddelande" rows="5" placeholder="Skriv här"/>
         
         <Knapp type="submit">Skicka</Knapp>
       </form>
