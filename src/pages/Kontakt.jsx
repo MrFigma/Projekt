@@ -12,7 +12,7 @@ function Kontakt() {
       </div>
 
       <form className="kontakt-form">
-        <label htmlfor="namn">Namn</label>
+        <label htmlFor="namn">Namn</label>
         <input type="text" id="namn" name="name" placeholder="Ditt namn" />
       
         <label htmlFor="epost">E-post</label>
