@@ -5,8 +5,8 @@ function Kontakt() {
   return (
     <section id="kontakt" className="kontakt">
       <div>
-      <h2>Kontakta mig</h2>
-      <p className="kontakt-text">Har du en fråga? skriv ett meddelande! </p>
+        <h2>Kontakta mig</h2>
+        <p className="kontakt-text">Har du en fråga? skriv ett meddelande! </p>
       </div>
 
       <form className="kontakt-form">
