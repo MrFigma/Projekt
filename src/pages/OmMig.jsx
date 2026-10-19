@@ -12,7 +12,7 @@ function OmMig() {
       <div className="om-mig-innehall">
         <h2>Om Mig</h2>
         <p className="om-mig-text">
-          Rappar kalja delux version mini haj med minigun
+          Rappar kalja, delux version mini haj med minigun
         </p>
         <p>
           Här lär jag min att bygga sidor i React med komponenter och
