@@ -1,4 +1,5 @@
 import "./OmMig.css";
+import { Visa } from "../components/Raknare"
 import heroBild from "../assets/hero7.jpg";
 
 function OmMig() {
@@ -18,6 +19,10 @@ function OmMig() {
           Här lär jag min att bygga sidor i React med komponenter och
           spara min kod i Github.
         </p>
+
+        <Visa>
+          <p>Här är mer text om mig.</p>
+        </Visa>
 
         <h3>Det här lär jag mig i kursen</h3>
         <ul className="om-mig-lista">

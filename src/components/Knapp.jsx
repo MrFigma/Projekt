@@ -2,9 +2,10 @@ import './Knapp.css';
 
 
 function Knapp({ text, lank, type}) {
-  return type === "submit"
-    ?  <button className="knapp" type="submit">Skicka</button>
-    :  <a className="knapp" href={lank}>{text}</a>;
+  if (type === "submit") {
+    return <button className="knapp" type="submit">Skicka</button>
+  }
+  return <a className="knapp" href={lank}>{text}</a>
 }
 
 export default Knapp;
