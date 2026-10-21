@@ -15,11 +15,23 @@ function Raknare() {
   }
   return (
     <div>
-      <button onClick={min}>Minska</button>
+      <Knapp type="button" 
+        onClick={min} 
+        text="Minska"
+      />
       <span>{antal}</span>
-      <button onClick={oka}>Plusa</button>
-      <button onClick={() => 
-        setAntal(0)}>Nollställ</button>
+       <Knapp type="button" 
+        onClick={oka} 
+        text="Öka"
+      />
+
+      <div>
+        <Knapp 
+          onClick={() => 
+          setAntal(0)} 
+          text="Nollställ"
+        />
+      </div>
     </div>
   );
 }
