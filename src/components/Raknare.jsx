@@ -1,3 +1,4 @@
+import Knapp from './Knapp';
 import { useState } from 'react';
 
 function Raknare() {
@@ -28,9 +29,11 @@ function Visa({ children }) {
 
   return (
     <div>
-      <button onClick={() => setVisas(!visas)}>
-        {visas ? "Visa Mindre" : "Visa Mer"}
-      </button>
+      <Knapp
+        type="button"
+        text={visas ? "Visa Mindre" : "Visa Mer"}
+        onClick={() => setVisas(!visas)}
+      />
 
       {visas && children}
     </div>
