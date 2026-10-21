@@ -21,7 +21,7 @@ function Kontakt() {
         <label htmlFor="meddelande">Meddelande</label>
         <textarea id="meddelande" name="meddelande" rows="5" placeholder="Skriv här"/>
         
-        <Knapp type="submit">Skicka</Knapp>
+        <Knapp type="submit" text="Skicka"/>
       </form>
     </section>
   );

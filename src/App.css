@@ -14,3 +14,24 @@ html {
   box-sizing: border-box;
   background-color: #f1fafd;
 }
+
+.app.morkt {
+  background-color: #111827;
+  color: white;
+}
+
+.app.morkt .header,
+.app.morkt .hero,
+.app.morkt .om-mig,
+.app.morkt .kontakt,
+.app.morkt .projekt,
+.app.morkt .projekt-kort {
+  background-color: #1f2937;
+  color: white;
+}
+
+.app.morkt .hero-intro,
+.app.morkt .hero h2,
+.app.morkt .om-mig h3 {
+  color: white;
+}
