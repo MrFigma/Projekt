@@ -15,6 +15,10 @@ html {
   background-color: #f1fafd;
 }
 
+#root:has(.app.morkt) {
+  border-inline-color: #111827;
+}
+
 .app.morkt {
   background-color: #111827;
   color: white;

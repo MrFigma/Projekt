@@ -2,3 +2,10 @@
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+html:has(.app.morkt),
+body:has(.app.morkt),
+#root:has(.app.morkt) {
+  background-color: #111827;
+  color: white;
+}
