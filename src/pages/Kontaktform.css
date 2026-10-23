@@ -1,0 +1,17 @@
+.kontakt-form input {
+  width: 70%;
+  height: 32px;
+  padding: 8px 12px;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.kontakt-form textarea {
+  width: 80%;
+  min-height: 160px;
+  padding: 12px;
+  box-sizing: border-box;
+  font: inherit;
+  align-self: center;
+  resize: vertical;
+}

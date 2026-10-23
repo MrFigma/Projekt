@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Knapp from '../components/Knapp';
-import './Kontakt.css'
+import './Kontakt.css';
+import './Kontaktform.css';
 
 function KontaktFormular() {
   const [namn, setNamn] = useState("");
