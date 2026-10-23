@@ -8,7 +8,9 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-const [mork, setMork] = useState(false);
+const [mork, setMork] = useState(
+  localStorage.getItem("morktLage") === "true"
+);
 
   return (
   <div className={mork ? "app morkt" : "app"}>

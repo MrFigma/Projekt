@@ -25,7 +25,11 @@ function Navbar({mork, setMork}) {
           ☾
         </span>}
         type="button"
-        onClick={() => setMork(!mork)}
+        onClick={() => {
+          const nyttMorktLage = !mork;
+          setMork(nyttMorktLage);
+          localStorage.setItem("morktLage", nyttMorktLage);
+        }}
       />
     </nav>
   );
