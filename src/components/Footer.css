@@ -6,6 +6,10 @@
   padding: 16px 32px;
   background-color: #1e293b;
   color: white;
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
 }
 
 .footer-lankar {

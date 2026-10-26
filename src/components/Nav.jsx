@@ -1,7 +1,7 @@
 import './Nav.css';
 import './Knapp.css';
 import heroBild from '../assets/hero2.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Knapp from './Knapp';
 
 function Navbar({mork, setMork}) {
@@ -15,9 +15,9 @@ function Navbar({mork, setMork}) {
       </span>
 
       <div className="lankar">
-        <Link to="/">Hem</Link>
-        <Link to="/om-mig">Om mig</Link>
-        <Link to="/kontakt">Kontakt</Link>
+        <NavLink to="/">Hem</NavLink>
+        <NavLink to="/om-mig">Om mig</NavLink>
+        <NavLink to="/kontakt">Kontakt</NavLink>
       </div>
       
       <Knapp
