@@ -1,6 +1,7 @@
 import './Hero.css';
 import heroBild from '../assets/hero1.jpg';
 import Knapp from './Knapp';
+import { Link } from "react-router-dom";
 
 
 function Hero({ namn }) {
@@ -13,7 +14,7 @@ function Hero({ namn }) {
           Välkommen till min portfolio. Här delar jag lär mig 
           med HTML, CSS och React.
         </p>
-        <Knapp text="Läs vidare" lank="#valkommen" />
+        <Knapp text="Projekt" lank="/projekt" />
       </div>
       <img className="hero-bild" 
         src={heroBild} 

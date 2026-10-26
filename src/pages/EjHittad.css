@@ -5,7 +5,7 @@
 .ej-hittad-kod {
   font-size: 96px;
   font-weight: 800;
-  color: #7e2b60;
+  color: #261f3a;
   line-height: 1;
 }
 
@@ -18,10 +18,10 @@
 
 .ej-hittad-knappar button {
   padding: 12px 24px;
-  border: 2px solid #7e2b60;
+  border: 2px solid #261f3a;
   border-radius: 10px;
   background: transparent;
-  color: #7e2b60;
+  color: #261f3a;
   font: inherit;
   font-weight: 600;
   cursor: pointer;

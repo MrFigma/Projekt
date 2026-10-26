@@ -3,6 +3,7 @@ import Navbar from "./components/Nav";
 import Footer from "./components/Footer";
 import OmMig from "./pages/OmMig";
 import Kontakt from "./pages/Kontakt";
+import ProjektSida from "./pages/ProjektSida";
 import Hem from "./pages/Hem";
 import EjHittad from "./pages/EjHittad";
 import { Route, Routes } from "react-router-dom";
@@ -19,6 +20,7 @@ const [mork, setMork] = useState(
     <Routes>
       <Route path="/" element={<Hem />} />
       <Route path="/om-mig" element={<OmMig />} />
+      <Route path="/projekt" element={<ProjektSida />} />
       <Route path="/kontakt" element={<Kontakt />} />
       <Route path="*" element={<EjHittad />} />
     </Routes>

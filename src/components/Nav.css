@@ -4,8 +4,9 @@
   align-items: center;
   padding: 16px 32px;
   background-color: #1e293b;
+  position: relative;
 
-  button{
+  .MorkKnapp{
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -52,4 +53,42 @@
 .lankar a.active {
   font-weight: 700;
   border-bottom: 2px solid currentColor;
+}
+
+.meny-knapp {
+  display: none;                   /* dold på dator */
+  width: 44px;
+  height: 44px;                    /* lagom stor för en tumme */
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .meny-knapp {
+    display: block;
+  }
+
+  .lankar {
+    display: none;                
+    position: absolute;
+    top: 100%;                     
+    left: 0;
+    right: 0;
+    z-index: 10;                    
+    flex-direction: column;
+    gap: 0;
+    background-color: #ab92a2;
+  }
+
+  .lankar.oppen {
+    display: flex;
+  }
+
+  .lankar a {
+    padding: 14px 32px;             
+  }
 }
