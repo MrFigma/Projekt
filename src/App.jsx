@@ -18,7 +18,7 @@ const [mork, setMork] = useState(
   <div className={mork ? "app morkt" : "app"}>
     <Navbar mork={mork} setMork={setMork} />
     <Routes>
-      <Route path="/" element={<Hem />} />
+      <Route path="/" element={<Hem />} /> 
       <Route path="/om-mig" element={<OmMig />} />
       <Route path="/projekt" element={<ProjektSida />} />
       <Route path="/kontakt" element={<Kontakt />} />
