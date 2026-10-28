@@ -4,7 +4,9 @@
   justify-content: space-between;   
   align-items: center;
   padding: 16px 32px;
-  background-color: #1e293b;
+  background:
+    radial-gradient(ellipse at 50% 0%, #edb18b 0%, transparent 58%),
+    linear-gradient(to bottom, #e9b69a 0%, #bd8581 55%, #45464d 100%);
   color: white;
   margin-top: auto;
   position: sticky;
