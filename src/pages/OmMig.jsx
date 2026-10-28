@@ -1,13 +1,13 @@
 import "./OmMig.css";
 import { Visa } from "../components/Raknare"
-import heroBild from "../assets/hero7.jpg";
+import heroBild from "../assets/RaktUrGhibli.jpg";
 
 function OmMig() {
   return (
     <section className="om-mig" id="om-mig">
       <img className="om-mig-bild" 
         src={heroBild} 
-        alt="Space Marine Shark with BIG gun"
+        alt="Tåg bro över sjö i Japan ser ut som den kommer ur en Studio Ghibli film."
       />
       
       <div className="om-mig-innehall">

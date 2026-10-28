@@ -1,9 +1,9 @@
 import "./Projekt.css";
 import ProjektKort from "./ProjektKort";
-import bild1 from "../assets/hero3.jpg";
-import bild2 from "../assets/hero4.jpg";
-import bild3 from "../assets/hero5.jpg";
-import bild4 from "../assets/hero6.jpg";
+import bild1 from "../assets/FloatingMonastery.jpg";
+import bild2 from "../assets/DarkHedges.jpg";
+import bild3 from "../assets/ForestOfPeaks.jpg";
+import bild4 from "../assets/GlacierLake.jpg";
 
 function Projekt() {
   return (
@@ -15,15 +15,15 @@ function Projekt() {
           titel="Min portfoliosida"
           text="Sidan du tittar på nu. Byggd med React och CSS."
           bild={bild1}
-          lank="https://www.google.se"
+          lank="https://www.google.com/search?sxsrf=APpeQnsA9F4OhXMa2DiK2BwAW_srYi_7gA:1793179908811&udm=2&q=Floating+monastery+meteora"
         />
           <ProjektKort titel="Projekt 2" 
-          text="Carcharodons wants YOU" 
+          text="Dark Hedges i Irland." 
           bild={bild2} 
           lank="https://wh40k.lexicanum.com/wiki/Carcharodons"
         />
         <ProjektKort titel="Projekt 3"
-          text="Gå med i den dyraste plasten i världen."
+          text="Skogen av bergs toppar i Kina."
           bild={bild3}
           lank="https://www.warhammer.com/en-WW/home"
        />

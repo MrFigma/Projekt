@@ -1,8 +1,6 @@
 import './Hero.css';
-import heroBild from '../assets/hero1.jpg';
+import heroBild from '../assets/HomeImage.jpg';
 import Knapp from './Knapp';
-import { Link } from "react-router-dom";
-
 
 function Hero({ namn }) {
   return (
@@ -18,7 +16,7 @@ function Hero({ namn }) {
       </div>
       <img className="hero-bild" 
         src={heroBild} 
-        alt="Carcharodon Space Marine Fighting Tyranids" 
+        alt="Utsickt över fält och berg rakt ur Lord of the rings filmerna" 
       />
     </section>
   );
