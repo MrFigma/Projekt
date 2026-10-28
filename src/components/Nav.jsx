@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import "./Knapp.css";
-import heroBild from "../assets/LogoEmblem.jpg";
+import heroBild from "../assets/LogoBild.jpg";
 import Knapp from "./Knapp";
 
 function Navbar({ mork, setMork }) {
