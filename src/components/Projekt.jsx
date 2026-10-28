@@ -13,19 +13,19 @@ function Projekt() {
       <div className="projekt-lista">
         <ProjektKort
           titel="Min portfoliosida"
-          text="Sidan du tittar på nu. Byggd med React och CSS."
+          text="Flytade kloster i Meteora Grekland."
           bild={bild1}
-          lank="https://www.google.com/search?sxsrf=APpeQnsA9F4OhXMa2DiK2BwAW_srYi_7gA:1793179908811&udm=2&q=Floating+monastery+meteora"
+          lank="https://en.wikipedia.org/wiki/Monastery_of_the_Holy_Trinity,_Meteora"
         />
           <ProjektKort titel="Projekt 2" 
           text="Dark Hedges i Irland." 
           bild={bild2} 
-          lank="https://wh40k.lexicanum.com/wiki/Carcharodons"
+          lank="https://en.wikipedia.org/wiki/Dark_Hedges"
         />
         <ProjektKort titel="Projekt 3"
           text="Skogen av bergs toppar i Kina."
           bild={bild3}
-          lank="https://www.warhammer.com/en-WW/home"
+          lank="https://en.wikipedia.org/wiki/Wulingyuan"
        />
         <ProjektKort 
           text="Kommer snart."
