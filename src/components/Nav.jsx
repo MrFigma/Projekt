@@ -35,12 +35,13 @@ function Navbar({ mork, setMork }) {
 
       <div
         id="huvudmeny"
-        className={oppen ? "lankar oppen" : "lankar"}
-      >
+        className={oppen ? "lankar oppen" : "lankar"}>
+
         <NavLink to="/" end onClick={stang}>Hem</NavLink>
         <NavLink to="/om-mig" onClick={stang}>Om mig</NavLink>
         <NavLink to="/projekt" onClick={stang}>Projekt</NavLink>
         <NavLink to="/kontakt" onClick={stang}>Kontakt</NavLink>
+        
       </div>
 
       <Knapp
