@@ -1,48 +1,11 @@
 .navbar {
-  --navbar-tree-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20360%20160'%20preserveAspectRatio='none'%3E%3Cstyle%3E@media%20(prefers-reduced-motion:%20reduce)%20%7B%20animateTransform%20%7B%20display:none;%20%7D%20%7D%3C/style%3E%3Cg%20fill='%23777b80'%3E%3Cpath%20d='M0%20160V120H8V104H18V84H29V64H40V43H51V22H62V43H73V64H84V84H95V104H105V120H114V160Z'%3E%3CanimateTransform%20attributeName='transform'%20type='rotate'%20values='-0.7%2057%20160;0.7%2057%20160;-0.7%2057%20160'%20dur='4.3s'%20repeatCount='indefinite'/%3E%3C/path%3E%3Cpath%20d='M104%20160V126H114V108H125V88H137V68H149V47H160V27H171V47H183V68H195V88H206V108H217V126H228V160Z'%3E%3CanimateTransform%20attributeName='transform'%20type='rotate'%20values='-0.7%20166%20160;0.7%20166%20160;-0.7%20166%20160'%20dur='5.1s'%20repeatCount='indefinite'/%3E%3C/path%3E%3Cpath%20d='M219%20160V119H230V101H241V81H252V61H263V40H274V19H286V40H297V61H308V81H319V101H330V119H341V160Z'%3E%3CanimateTransform%20attributeName='transform'%20type='rotate'%20values='-0.7%20280%20160;0.7%20280%20160;-0.7%20280%20160'%20dur='3.7s'%20repeatCount='indefinite'/%3E%3C/path%3E%3Cpath%20d='M280%20160V130H290V111H301V91H312V71H320V160Z'%3E%3C/path%3E%3Cpath%20d='M320%20160V71H328V91H339V111H350V130H360V160Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  position: relative;
-  isolation: isolate;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
   background:
-    radial-gradient(ellipse at 50% 100%, #edb18b 0%, transparent 58%),
-    linear-gradient(to bottom, #e9b69a 0%, #bd8581 55%, #45464d 100%);
-}
-
-/* Gråare träd i bakgrunden */
-.navbar::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.55;
-  background-image: var(--navbar-tree-image);
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 220px 100%;
-}
-
-/* Mörkare träd närmare förgrunden */
-.navbar::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  pointer-events: none;
-  filter: brightness(0.2);
-  background-image: var(--navbar-tree-image);
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 270px 100%;
-}
-
-/* Lägg navens befintliga innehåll ovanpå bakgrundsträden */
-.navbar > * {
-  position: relative;
-  z-index: 1;
+    radial-gradient(ellipse at 90% 90%, #edb18b 0%, transparent 58%),
+    linear-gradient(to bottom, #e9b69a 0%, #bd8581 55%);
 }
 
 .logo {
