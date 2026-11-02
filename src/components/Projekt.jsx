@@ -1,7 +1,6 @@
 import "./Projekt.css";
 import ProjektKort from "./ProjektKort";
 import projektLista from "../data/projekt.json"
-import Knapp from "./Knapp";
 import bild1 from "../assets/FloatingMonastery.jpg";
 import bild2 from "../assets/DarkHedges.jpg";
 import bild3 from "../assets/ForestOfPeaks.jpg";
@@ -9,10 +8,10 @@ import bild4 from "../assets/GlacierLake.jpg";
 import { useState } from "react";
 
 const bilder = {
-  "FloatingMonastery": bild1,
-  "DarkHedges": bild2,
-  "ForestOfPeaks": bild3,
-  "GlacierLake": bild4,
+  "HomeImage.jpg": bild1,
+  "FloatingMonastery.jpg": bild2,
+  "DarkHedges.jpg": bild3,
+  "ForestOfPeaks.jpg": bild4,
 };
 
 const filterLista = ["Alla", "React", "CSS", "HTML", "useState", "Git"];
@@ -24,7 +23,7 @@ function Projekt() {
 
   const synligaProjekt = projektLista.filter((p) => {
     const rattTeknik = vald === "Alla" || p.teknik.includes(vald);
-    const rattSok = p.titel.toLowerCase().includes(sok.toLowerCase);
+    const rattSok = p.titel.toLowerCase().includes(sok.toLowerCase());
     return rattTeknik && rattSok;
   })
 
@@ -34,14 +33,14 @@ function Projekt() {
       
       <div className="projekt-filter">
         {filterLista.map((f) => (
-          <Knapp type="button"
-            text={f}
-            className={f === vald ? "filter-knapp aktiv" : "filter-knapp"} 
+            <button
+            key={f}
+            className={f === vald ? "filter-knapp aktiv" : "filter-knapp"}
             onClick={() => setVald(f)}
             aria-pressed={f === vald}
           >
             {f}
-          </Knapp>
+          </button>
         ))}
       </div>
 
@@ -63,13 +62,14 @@ function Projekt() {
           <p className="projekt-tom">Inga projekt matchar. Prova annat filter</p>
         ) : (
           <div className="projekt-lista">
-            {projektLista.map((p) => (
+            {synligaProjekt.map((p) => (
             <ProjektKort
               key={p.id}
               titel={p.titel}
               text={p.text}
-              bild={p.bild}
+              bild={bilder[p.bild]}
               lank={p.lank}
+              teknik={p.teknik}
             />
           ))}
         </div>
