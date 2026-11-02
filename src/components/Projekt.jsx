@@ -1,10 +1,12 @@
 import "./Projekt.css";
 import ProjektKort from "./ProjektKort";
 import projektLista from "../data/projekt.json"
+import Knapp from "./Knapp";
 import bild1 from "../assets/FloatingMonastery.jpg";
 import bild2 from "../assets/DarkHedges.jpg";
 import bild3 from "../assets/ForestOfPeaks.jpg";
 import bild4 from "../assets/GlacierLake.jpg";
+import { useState } from "react";
 
 const bilder = {
   "FloatingMonastery": bild1,
@@ -13,25 +15,65 @@ const bilder = {
   "GlacierLake": bild4,
 };
 
-const [vald, setVald] = useState("Alla");
-const [sok, setSok] = useState("");
+const filterLista = ["Alla", "React", "CSS", "HTML", "useState", "Git"];
 
 function Projekt() {
+
+  const [vald, setVald] = useState("Alla");
+  const [sok, setSok] = useState("");
+
+  const synligaProjekt = projektLista.filter((p) => {
+    const rattTeknik = vald === "Alla" || p.teknik.includes(vald);
+    const rattSok = p.titel.toLowerCase().includes(sok.toLowerCase);
+    return rattTeknik && rattSok;
+  })
+
   return (
     <section className="projekt" id="projekt">
       <h2>Mina projekt</h2>
-
-      <div className="projekt-lista">
-        {projektLista.map((p) => (
-          <projektLista 
-            key={p.id}
-            titel={p.titel}
-            text={p.text}
-            bild={p.bild}
-            lank={p.lank}
-          />
+      
+      <div className="projekt-filter">
+        {filterLista.map((f) => (
+          <Knapp type="button"
+            text={f}
+            className={f === vald ? "filter-knapp aktiv" : "filter-knapp"} 
+            onClick={() => setVald(f)}
+            aria-pressed={f === vald}
+          >
+            {f}
+          </Knapp>
         ))}
       </div>
+
+      <label className="projekt-sok">
+        Sok projekt
+        <input
+          type="search"
+          value={sok}
+          onChange={(e) => setSok(e.target.value)}
+          placeholder="t.ex. räknare"
+        />
+      </label>
+
+      <p className="projekt-antal">
+        Visar {synligaProjekt.length} av {projektLista.length} projekt
+      </p>
+
+        {synligaProjekt.length === 0 ? (
+          <p className="projekt-tom">Inga projekt matchar. Prova annat filter</p>
+        ) : (
+          <div className="projekt-lista">
+            {projektLista.map((p) => (
+            <ProjektKort
+              key={p.id}
+              titel={p.titel}
+              text={p.text}
+              bild={p.bild}
+              lank={p.lank}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
