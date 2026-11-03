@@ -1,0 +1,24 @@
+.vader {
+  text-align: center;
+  
+}
+
+
+.vader-lista {
+  display: flex;               
+  flex-wrap: wrap;             
+  justify-content: center;     
+  gap: 1rem;      
+  margin-top: 1rem;             
+}
+
+
+.vader-kort {
+  width: 180px;                
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

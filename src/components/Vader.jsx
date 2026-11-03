@@ -1,3 +1,4 @@
+import "./Vader.css"
 import { useState, useEffect } from "react";
 
 const stader = [
@@ -49,9 +50,13 @@ function Vader() {
       <h2>Vädret just nu</h2>
       {laddar && <p>Laddar vädret...</p>}
       {fel && <p role="alert">{fel}</p>}
-      {vader && vader.map((stad) => (
-        <p key={stad.namn}>{stad.namn}: {stad.temp} °C, {stad.vind} km/h</p>
-      ))}
+    {vader && (
+      <div className="vader-lista">
+        {vader.map((stad) => (
+          <p key={stad.namn} className="vader-kort">{stad.namn}: {stad.temp} °C, {stad.vind} km/h</p>
+        ))}
+      </div>
+    )}
     </section>
   );
 }
