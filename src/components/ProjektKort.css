@@ -28,3 +28,62 @@
   padding: 10px;
   text-align: center;
 }
+
+.projekt-filter {
+  display: flex;
+  flex-wrap: wrap;                      /* knapparna radbryts på mobil */
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-knapp {
+  min-height: 44px;                     /* lätt att träffa med tummen */
+  padding: 8px 16px;
+  border: 2px solid #7e502b;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #d19240;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-knapp:hover {
+  background-color: #ede9f6;
+}
+
+.filter-knapp.aktiv {
+  background-color: #7e502b;            /* den valda knappen är ifylld */
+  color: #fcf6fa;
+}
+
+.projekt-sok {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 320px;
+  margin: 0 auto 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.projekt-sok input {
+  padding: 10px 12px;
+  border: 1px solid #d8d3bf;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.projekt-antal {
+  margin-bottom: 24px;
+  color: #6b6480;
+  font-size: 14px;
+}
+
+.projekt-tom {
+  padding: 32px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+    

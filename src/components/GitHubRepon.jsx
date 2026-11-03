@@ -1,4 +1,5 @@
 import "./GitHubRepon.css";
+import { snyggtDatum, kortText } from "../utils/text";
 import { useState, useEffect } from "react";
 
 const ANVANDARE = "MrFigma";
@@ -18,6 +19,7 @@ function GitHubRepon() {
           throw new Error("Svar: " + svar.status);
         }
         const data = await svar.json();
+        console.log("Repon från Github", data);
         setRepon(data);
       } catch {
         setFel("Kunde inte hämta repon från GitHub just nu. Försök igen om en stund.");
@@ -43,6 +45,7 @@ function GitHubRepon() {
             </h3>
             <p>{r.description || "Ingen beskrivning än."}</p>
             {r.language && <span className="github-sprak">{r.language}</span>}
+            <p>Uppdaterad {snyggtDatum(r.updated_at)}</p>
           </li>
         ))}
       </ul>
