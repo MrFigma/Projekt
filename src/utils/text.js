@@ -1,5 +1,5 @@
 export const snyggtDatum = (datum) => 
-  new Date(datum).toLocalDataString("sv-SE", {
+  new Date(datum).toLocaleDateString("sv-SE", {
     day: "numeric",
     month: "short",
     year: "numeric",

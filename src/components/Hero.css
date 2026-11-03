@@ -5,12 +5,13 @@
     gap: 40px;
     padding: 64px 32px 72px;    
     text-align: left;
-    background-color: #ffffff;
+    background: transparent;
     color: #3e3a4e;
 }
 
 .hero-innehall {
     min-width: 0;
+    color: #fff;
 }
 
 .hero-bild{
@@ -22,7 +23,7 @@
 
 .hero-intro {
     margin: 0 0 16px;
-    color: #3e3a4e;
+    color: #fff;
     font-size: 18px;
     font-weight: 600;
 }
@@ -30,7 +31,7 @@
 .hero h2 {
     max-width: 20ch;
     margin: 0 0 24px;
-    color: #3e3a4e;
+    color: #fff;
     font-size: clamp(32px, 5vw, 52px);
     font-weight: 700;
     line-height: 1.15;

@@ -1,51 +1,38 @@
-/* Samma stil som projektkorten */
 .github {
-  padding: 40px 20px;
-  text-align: left;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
 }
 
 .github-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));   
-  gap: 16px;
+  list-style: none;
   padding: 0;
-  list-style: none;                      
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
 }
 
 .github-kort {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(74, 46, 81, 0.12);
-}
-
-.github-kort h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .github-kort a {
-  color: #bd8581;
+  color: #ffd9bf;
 }
 
 .github-sprak {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 4px 12px;
+  background: #edb18b;
+  color: #222;
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  background-color: #ede9f6;
-  color: #bd8581;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .github-fel {
-  color: #b3261e;
-  font-weight: 600;
-}
-
-@media (min-width: 600px) {
-  .github {
-    padding: 64px 32px;
-  }
+  color: #e96652;
 }

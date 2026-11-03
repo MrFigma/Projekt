@@ -1,11 +1,22 @@
-* {
+html {
+  background:
+    radial-gradient(ellipse 35% 20% at 95% 0%, #edb18b 0%, transparent 100%),
+    radial-gradient(ellipse 60% 25% at 50% 85%, rgba(237, 177, 139, 0.35) 0%, transparent 100%),
+    linear-gradient(to bottom, #e9b69a 0%, #a8787a 50%, #8f6a6e 80%, #45464d 100%);
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
   margin: 0;
+  background: transparent;
   font-family: Arial, sans-serif;
 }
 
-html:has(.app.morkt),
-body:has(.app.morkt),
-#root:has(.app.morkt) {
-  background-color: #111827;
-  color: white;
+html:has(.app.morkt) {
+  background:
+    radial-gradient(ellipse 25% 14% at 95% 0%, rgba(170, 190, 255, 0.25) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 20% at 50% 85%, rgba(120, 140, 220, 0.12) 0%, transparent 100%),
+    linear-gradient(to bottom, #1c2340 0%, #141a33 50%, #0d1226 80%, #05070f 100%);
+  background-attachment: fixed;
 }

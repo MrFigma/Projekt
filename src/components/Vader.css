@@ -1,6 +1,5 @@
 .vader {
-  text-align: center;
-  
+  text-align: center; 
 }
 
 
@@ -17,8 +16,8 @@
   width: 160px;                
   margin: 0;
   padding: 1rem;
-  border: 1px solid #ddd;
   border-radius: 12px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  color: #fff;
 }

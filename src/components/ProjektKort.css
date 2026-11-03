@@ -10,7 +10,7 @@
 
 .projekt-kort {
   border-radius: 8px;
-  background-color: #ffffff;
+  background: transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -77,7 +77,7 @@
 
 .projekt-antal {
   margin-bottom: 24px;
-  color: #6b6480;
+  color: #fff;
   font-size: 14px;
 }
 

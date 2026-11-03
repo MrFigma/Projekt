@@ -1,47 +1,18 @@
-html {
-  background-color: #ede9f6;
-}
-
 #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid #d6cdde;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #f1fafd;
-}
-
-#root:has(.app.morkt) {
-  border-inline-color: #111827;
+  color: #fff;
 }
 
 .app {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.app.morkt {
-  background-color: #111827;
-  color: white;
-}
-
-.app.morkt .header,
-.app.morkt .hero,
-.app.morkt .om-mig,
-.app.morkt .kontakt,
-.app.morkt .projekt,
-.app.morkt .projekt-kort {
-  background-color: #1f2937;
-  color: white;
-}
-
-.app.morkt .hero-intro,
-.app.morkt .hero h2,
-.app.morkt .om-mig h3 {
-  color: white;
+  background: transparent;  
 }
