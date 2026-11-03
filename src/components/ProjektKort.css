@@ -20,3 +20,11 @@
   flex: 1;
   flex-direction: column;
 }
+
+.projekt-taggar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}

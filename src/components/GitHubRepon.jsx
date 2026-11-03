@@ -1,7 +1,7 @@
 import "./GitHubRepon.css";
 import { useState, useEffect } from "react";
 
-const ANVANDARE = "Mr.Figma";
+const ANVANDARE = "MrFigma";
 const API_URL =
   "https://api.github.com/users/" + ANVANDARE + "/repos?sort=updated&per_page=6";
 
