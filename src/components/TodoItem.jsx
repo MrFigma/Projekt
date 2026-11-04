@@ -7,9 +7,10 @@ function TodoItem({text, onRemove}) {
       <span>{text}</span>
       <Knapp 
         type="button"
-        onCLick={onRemove}
+        text="✕"
+        onClick={onRemove}
         aria-label="Ta bort"
-      >✕</Knapp>
+      >{text}</Knapp>
     </li>
   )
 }
