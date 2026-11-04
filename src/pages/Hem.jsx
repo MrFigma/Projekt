@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Projekt from "../components/Projekt";
 import GitHubRepon from "../components/GitHubRepon";
 import Vader from "../components/Vader";
+import Todo from "../components/Todo";
 
 function Hem() {
   return (
@@ -10,6 +11,7 @@ function Hem() {
       <Projekt />
       <Vader />
       <GitHubRepon />
+      <Todo />
     </>
   );
 }

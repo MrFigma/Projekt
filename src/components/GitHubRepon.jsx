@@ -1,10 +1,10 @@
 import "./GitHubRepon.css";
+import { GITHUB_USER } from "../data/settings";
 import { snyggtDatum, kortText } from "../utils/text";
 import { useState, useEffect } from "react";
 
-const ANVANDARE = "MrFigma";
 const API_URL =
-  "https://api.github.com/users/" + ANVANDARE + "/repos?sort=updated&per_page=6";
+  "https://api.github.com/users/" + GITHUB_USER + "/repos?sort=updated&per_page=6";
 
 function GitHubRepon() {
   const [repon, setRepon] = useState([]);

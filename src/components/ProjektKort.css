@@ -21,6 +21,10 @@
   flex-direction: column;
 }
 
+.knapp {
+  margin: 0 4rem;
+}
+
 .projekt-taggar {
   display: flex;
   flex-direction: column;

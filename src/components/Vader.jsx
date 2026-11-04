@@ -1,11 +1,7 @@
 import "./Vader.css"
+import stader from "../data/stader.json"
 import { useState, useEffect } from "react";
 
-const stader = [
-  { namn: "Helsingborg", lat: 56.05, lon: 12.69 },
-  { namn: "Stockholm", lat: 59.33, lon: 18.07 },
-  { namn: "Kiruna", lat: 67.86, lon: 20.23 },
-];
 
 const BAS_URL = "https://api.open-meteo.com/v1/forecast";
 

@@ -17,7 +17,7 @@ function ProjektKort({ titel, text, bild, lank, teknik }) {
         </ul>
 
         {lank && (
-          <Knapp text="Se Projekt" lank={lank}/>
+          <Knapp type="button" text="Se Projekt" lank={lank}/>
         )}
       </div>
     </article>

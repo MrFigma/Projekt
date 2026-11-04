@@ -4,6 +4,7 @@
   align-items: center;
   padding: 16px 32px;
   background: transparent;
+  position: relative;
 }
 
 .logo {
@@ -59,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: -12px;
 }
 
 .navbar .MorkKnapp span {
@@ -81,6 +83,10 @@
     flex-direction: column;
     gap: 0;
     background-color: #bd8581;
+  }
+
+  .app.morkt .lankar {
+    background-color: rgb(27, 30, 75);
   }
 
   .lankar.oppen {

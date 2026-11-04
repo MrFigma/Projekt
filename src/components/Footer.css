@@ -1,13 +1,13 @@
 .footer {
   height: 100px;
-  display: flex;                    
+  display: flex;        
+  flex-wrap: wrap;            
   justify-content: space-between;   
   align-items: center;
   padding: 16px 32px;
   background: transparent;
   color: white;
   margin-top: auto;
-  position: sticky;
   bottom: 0;
   z-index: 1;
 }
@@ -23,5 +23,17 @@
 }
 
 .footer-lankar a:hover {
+  text-decoration: underline;
+}
+
+.footer-email {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.footer-email:hover {
   text-decoration: underline;
 }
