@@ -56,7 +56,7 @@ function Projekt() {
       </div>
 
       <label className="projekt-sok">
-        Sok projekt
+        Sök projekt
         <input
           type="search"
           value={sok}
