@@ -29,7 +29,7 @@
 
 .om-mig h3 {
   margin: 0 0 16px;
-  color: #d19240;
+  color: #fff;
   font-size: 20px;
   padding-top: 15px;
 }
@@ -46,8 +46,9 @@
 .om-mig-lista li {
   padding: 8px 20px;
   border-radius: 999px;             
-  background-color: #a76f42;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  color: #d19240;
   font-weight: 600;
 }
 
