@@ -20,12 +20,23 @@ function Projekt() {
 
   const [vald, setVald] = useState("Alla");
   const [sok, setSok] = useState("");
+  const [sortering, setSortering] = useState("standard")
 
   const synligaProjekt = projektLista.filter((p) => {
     const rattTeknik = vald === "Alla" || p.teknik.includes(vald);
     const rattSok = p.titel.toLowerCase().includes(sok.toLowerCase());
     return rattTeknik && rattSok;
   })
+
+  const sorteradeProjekt = [...synligaProjekt];
+
+  if (sortering === "titel") {
+    sorteradeProjekt.sort((a, b) => a.titel.localeCompare(b.titel, "sv"));
+  }
+
+  if (sortering === "teknik") {
+    sorteradeProjekt.sort((a, b) => b.teknik.length - a.teknik.length)
+  }
 
   return (
     <section className="projekt" id="projekt">
@@ -54,6 +65,16 @@ function Projekt() {
         />
       </label>
 
+      <select className="sortera-projekt" 
+        value={sortering} 
+        onChange={(e) => setSortering(e.target.value)}
+      >
+        <option value="standard">Standard</option>
+        <option value="titel">Titel A-Ö</option>
+        <option value="teknik">Tekniker</option>
+      </select>
+
+
       <p className="projekt-antal">
         Visar {synligaProjekt.length} av {projektLista.length} projekt
       </p>
@@ -62,9 +83,10 @@ function Projekt() {
           <p className="projekt-tom">Inga projekt matchar. Prova annat filter</p>
         ) : (
           <div className="projekt-lista">
-            {synligaProjekt.map((p) => (
+            {sorteradeProjekt.map((p) => (
             <ProjektKort
               key={p.id}
+              id={p.id}
               titel={p.titel}
               text={p.text}
               bild={bilder[p.bild]}

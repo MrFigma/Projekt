@@ -1,8 +1,9 @@
 import "./ProjektKort.css";
 import "./Knapp.css";
 import Knapp from "./Knapp";
+import { Link } from "react-router-dom";
 
-function ProjektKort({ titel, text, bild, lank, teknik }) {
+function ProjektKort({ titel, text, bild, id, teknik }) {
   return (
     <article className="projekt-kort">
       <img className="projekt-bild" src={bild} alt="" />
@@ -16,9 +17,9 @@ function ProjektKort({ titel, text, bild, lank, teknik }) {
           ))}
         </ul>
 
-        {lank && (
-          <Knapp type="button" text="Se Projekt" lank={lank}/>
-        )}
+        <Link to={`/projekt/${id}`}>
+          <Knapp type="button" text="Läs mer" />
+        </Link>
       </div>
     </article>
   );

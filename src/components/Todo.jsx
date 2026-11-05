@@ -42,6 +42,7 @@ function Todo() {
 
       <form onSubmit={addTodo}>
         <input
+          className="todo-info"
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
