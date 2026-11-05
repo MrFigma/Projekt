@@ -1,7 +1,7 @@
 .om-mig {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* bild till vänster, text till höger */
-  align-items: center;              /* texten hamnar mitt för bilden */
+  grid-template-columns: 1fr 1fr;   
+  align-items: center;             
   gap: 40px;
   padding: 64px 32px;
   text-align: left;
@@ -11,7 +11,7 @@
 .om-mig-bild {
   display: block;
   width: 100%;
-  height: auto;                     /* bilden behåller sin form */
+  height: auto;                     
   border-radius: 8px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .om-mig-text {
-  max-width: 55ch;                  /* lagom lång rad, lätt att läsa */
+  max-width: 55ch;                  
   margin: 0 0 24px;
   font-size: 18px;
   line-height: 1.7;
@@ -29,29 +29,28 @@
 
 .om-mig h3 {
   margin: 0 0 16px;
-  color: #261f3a;
+  color: #d19240;
   font-size: 20px;
   padding-top: 15px;
 }
 
 .om-mig-lista {
-  display: flex;                    /* lägger etiketterna på en rad */
-  flex-wrap: wrap;                  /* på mobil hamnar de på flera rader */
+  display: flex;                  
+  flex-wrap: wrap;                  
   gap: 12px;
   padding: 0;
   margin: 0;
-  list-style: none;                 /* tar bort pricken framför */
+  list-style: none;                
 }
 
 .om-mig-lista li {
   padding: 8px 20px;
-  border-radius: 999px;             /* helt runda kanter */
+  border-radius: 999px;             
   background-color: #a76f42;
   color: #fff;
   font-weight: 600;
 }
 
-/* På mobil hamnar texten under bilden */
 @media (max-width: 800px) {
   .om-mig {
     grid-template-columns: 1fr;

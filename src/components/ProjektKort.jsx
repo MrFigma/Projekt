@@ -4,11 +4,17 @@ import Knapp from "./Knapp";
 import { Link } from "react-router-dom";
 
 function ProjektKort({ titel, text, bild, id, teknik }) {
+
+  const anvanderReact = teknik.some((t) => t === "React");
+
   return (
     <article className="projekt-kort">
       <img className="projekt-bild" src={bild} alt="" />
       <div className="projekt-info">
         <h3>{titel}</h3>
+
+        {anvanderReact && <span className="react-etikett">Använder React</span>}
+
         <p>{text}</p>
 
         <ul className="projekt-taggar">

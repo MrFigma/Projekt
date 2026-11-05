@@ -1,5 +1,6 @@
 import "./OmMig.css";
 import { Visa } from "../components/Raknare"
+import Statistik from "../components/Statistik";
 import heroBild from "../assets/RaktUrGhibli.jpg";
 
 function OmMig() {
@@ -12,6 +13,9 @@ function OmMig() {
       
       <div className="om-mig-innehall">
         <h2>Om Mig</h2>
+
+        <Statistik />
+
         <p className="om-mig-text">
           Rappar kalja, delux version mini haj med minigun
         </p>
