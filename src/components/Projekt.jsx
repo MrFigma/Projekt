@@ -14,7 +14,15 @@ const bilder = {
   "ForestOfPeaks.jpg": bild4,
 };
 
-const filterLista = ["Alla", "React", "CSS", "HTML", "useState", "Git"];
+const filterLista = ["Alla"];
+
+for (const projekt of projektLista) {              
+  for (const teknik of projekt.teknik) {           
+    if (!filterLista.includes(teknik)) {           
+      filterLista.push(teknik);                    
+    }                                              
+  }                                                
+}            
 
 function Projekt() {
 

@@ -11,3 +11,15 @@ export const snyggtDatum = (datum) =>
     }
     return `${text.slice(0, max)}... `;
   };
+
+  export const halsning = () => {
+    const timme = new Date().getHours();
+
+    if (timme < 10) {
+      return "God Morgon";
+    }else if (timme < 18) {
+      return "Hej";
+    } else {
+      return "God Kväll";
+    }
+  };

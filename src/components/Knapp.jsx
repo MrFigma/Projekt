@@ -1,12 +1,12 @@
 import './Knapp.css';
 
 
-function Knapp({ text, lank, type, onClick, className = "" }) {
+function Knapp({ text, lank, type, onClick, className = "", disabled }) {
   const knappClassName = `knapp ${className}`.trim();
 
   if (type === "submit" || type === "button") {
     return (
-      <button className={knappClassName} type={type} onClick={onClick}>
+      <button className={knappClassName} type={type} onClick={onClick} disabled={disabled}>
         {text}
       </button>
     );
