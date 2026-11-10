@@ -20,13 +20,13 @@
     "titel": "Statisk sida",
     "text": "Min första sida i ren HTML och CSS.",
     "bild": "DarkHedges.jpg",
-    "lank": "#",
+    "lank": "/om-mig",
     "teknik": ["HTML", "CSS"]
   },
   {
     "id": 4,
     "titel": "Räknare",
-    "text": "Räknare med + och –, nollställning och färg som ändras.",
+    "text": "Räknare med + och -, nollställning och färg som ändras.",
     "bild": "ForestOfPeaks.jpg",
     "lank": "#",
     "teknik": ["React", "useState"]
