@@ -7,6 +7,7 @@ import ProjektSida from "./pages/ProjektSida";
 import Hem from "./pages/Hem";
 import ProjektDetalj from "./pages/ProjektDetalj";
 import EjHittad from "./pages/EjHittad";
+import MinServer from "./components/MinServer"
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,6 +26,7 @@ const [mork, setMork] = useState(
       <Route path="/projekt/:id" element={<ProjektDetalj />} />
       <Route path="/kontakt" element={<Kontakt />} />
       <Route path="*" element={<EjHittad />} />
+      <Route path="/server" element={<MinServer />} />
     </Routes>
     <Footer />
   </div>
