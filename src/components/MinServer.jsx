@@ -35,7 +35,7 @@ function MinServer() {
         <div>
           <p>{data.meddelande}</p>
           <p>Namn: {data.namn}</p>
-          <p>Roll:: {data.roll}</p>
+          <p>Roll: {data.roll}</p>
           <h3>intressen</h3>
           <ul>
             {data.intressen.map((intresse) => (
