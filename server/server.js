@@ -38,6 +38,20 @@ app.get("/projekt/:id", (req, res) => {
   res.json(hittat);
 });
 
+
+
+app.delete("/projekt/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const index = projektLista.findIndex((p) => p.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({ fel: "Projektet finns inte" });
+  }
+
+  projektLista.splice(index, 1);
+  res.status(204).end();
+})
+
 app.listen(PORT, () => {
   console.log(`Servern körs på http://localhost:${PORT}`);
 });

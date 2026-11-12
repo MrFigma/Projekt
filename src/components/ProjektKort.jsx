@@ -3,7 +3,7 @@ import "./Knapp.css";
 import Knapp from "./Knapp";
 import { Link } from "react-router-dom";
 
-function ProjektKort({ titel, text, bild, id, teknik, lank }) {
+function ProjektKort({ titel, text, bild, id, teknik, lank, tabort }) {
 
   const anvanderReact = teknik.some((t) => t === "React");
 
@@ -28,8 +28,9 @@ function ProjektKort({ titel, text, bild, id, teknik, lank }) {
         </Link>
 
         <Knapp text="projekt" lank={lank} />
-        
-      </div>
+       </div>
+          <Knapp type="button" text="Ta bort" onClick={() => tabort(id)} />
+
     </article>
   );
 }

@@ -13,11 +13,14 @@ const bilder = {
   "ForestOfPeaks.jpg": bild4,
 };
 
+const SERVER_URL = "http://localhost:3001/projekt" 
+
 function Projekt() {
   const [projektLista, setProjektLista] = useState([]);
   const [vald, setVald] = useState("Alla");
   const [sok, setSok] = useState("");
   const [sortering, setSortering] = useState("standard")
+  const [error, setError] = useState("")
   
   useEffect(() => {
     async function hamtaProjekt() {
@@ -27,6 +30,18 @@ function Projekt() {
     }
     hamtaProjekt();
   }, []);
+
+  async function deleteProjekt(id) {
+    try {
+      const response = await fetch(SERVER_URL + "/" + id, {method: "DELETE"});
+      if (!response.ok) {
+        throw new Error("Servern svarade med " + response.status);
+      }
+      setProjektLista((prev) => prev.filter((p) => p.id !== id));
+    } catch {
+      setError("Kunde inte ta bort projektet. Är servern igång?");
+    }
+  }
 
   const filterLista = ["Alla"];
 
@@ -108,6 +123,7 @@ function Projekt() {
               bild={bilder[p.bild]}
               lank={p.lank}
               teknik={p.teknik}
+              tabort={deleteProjekt}
             />
           ))}
         </div>
