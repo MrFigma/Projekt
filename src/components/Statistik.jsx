@@ -1,8 +1,19 @@
-import projektLista from "../data/projekt.json"
 import "./Statistik.css"
+import { useState, useEffect } from "react";
 
 
 function Statistik() {
+  const [projektLista, setProjektLista] = useState([]);
+
+  useEffect(() => {
+    async function hamtaProjekt() {
+      const res = await fetch("http://localhost:3001/projekt");
+      const data = await res.json();
+      setProjektLista(data);
+    }
+    hamtaProjekt();
+  }, []);
+
   const antal = projektLista.reduce((summa, projekt) => {
     for (const teknik of projekt.teknik) {
       summa[teknik] = (summa[teknik] || 0) + 1;

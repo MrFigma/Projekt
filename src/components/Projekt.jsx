@@ -1,11 +1,10 @@
 import "./Projekt.css";
 import ProjektKort from "./ProjektKort";
-import projektLista from "../data/projekt.json"
 import bild1 from "../assets/FloatingMonastery.jpg";
 import bild2 from "../assets/DarkHedges.jpg";
 import bild3 from "../assets/ForestOfPeaks.jpg";
 import bild4 from "../assets/GlacierLake.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const bilder = {
   "HomeImage.jpg": bild1,
@@ -14,21 +13,30 @@ const bilder = {
   "ForestOfPeaks.jpg": bild4,
 };
 
-const filterLista = ["Alla"];
-
-for (const projekt of projektLista) {              
-  for (const teknik of projekt.teknik) {           
-    if (!filterLista.includes(teknik)) {           
-      filterLista.push(teknik);                    
-    }                                              
-  }                                                
-}            
-
 function Projekt() {
-
+  const [projektLista, setProjektLista] = useState([]);
   const [vald, setVald] = useState("Alla");
   const [sok, setSok] = useState("");
   const [sortering, setSortering] = useState("standard")
+  
+  useEffect(() => {
+    async function hamtaProjekt() {
+      const res = await fetch("http://localhost:3001/projekt");
+      const data = await res.json();
+      setProjektLista(data);
+    }
+    hamtaProjekt();
+  }, []);
+
+  const filterLista = ["Alla"];
+
+  for (const projekt of projektLista) {              
+    for (const teknik of projekt.teknik) {           
+      if (!filterLista.includes(teknik)) {           
+        filterLista.push(teknik);                    
+      }                                              
+    }                                                
+  }            
 
   const synligaProjekt = projektLista.filter((p) => {
     const rattTeknik = vald === "Alla" || p.teknik.includes(vald);

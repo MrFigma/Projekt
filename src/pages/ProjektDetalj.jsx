@@ -1,15 +1,36 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import projektLista from "../data/projekt.json";
 
 function ProjektDetalj() {
   const { id } = useParams();
-  const projekt = projektLista.find((p) => p.id === Number(id));
+  const [projekt, setProjekt] = useState(null);
+  const [fel, setFel] = useState(false);
 
-  if (!projekt) {
-    return <p>Projektet finns inte. <Link to="/">Till Startsidan</Link></p>
+  useEffect(() => {
+    async function hamtaProjekt() {
+      const res = await fetch(`http://localhost:3001/projekt/${id}`);
+
+      if (!res.ok) {
+        setFel(true);
+        return;
+      }
+
+      const data = await res.json();
+      setProjekt(data);
+    }
+
+    hamtaProjekt();
+  }, [id]);
+
+  if (fel) {
+    return <p>Projektet finns inte. <Link to="/">Till Startsidan</Link></p>;
   }
 
-  const { titel, text, teknik} = projekt;
+  if (!projekt) {
+    return <p>Laddar...</p>;
+  }
+
+  const { titel, text, teknik } = projekt;
 
   return (
     <section className="projekt-detalj">

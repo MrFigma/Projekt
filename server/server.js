@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { projektLista } from "./projekt.js";
 
 const app = express();
 const PORT = 3001;
@@ -17,6 +18,24 @@ app.get("/hej", (req, res) => {
 
 app.get("/tid", (req, res) => {
   res.json({ tid: new Date().toLocaleTimeString("Sv-SE") });
+});
+
+
+
+
+app.get("/projekt", (req, res) => {
+  res.json(projektLista);
+});
+
+app.get("/projekt/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const hittat = projektLista.find((p) => p.id === id);
+
+  if (!hittat) {
+    return res.status(404).json({ fel: "Projektet finns inte" });
+  }
+
+  res.json(hittat);
 });
 
 app.listen(PORT, () => {
