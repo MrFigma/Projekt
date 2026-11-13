@@ -12,17 +12,17 @@
   z-index: 1;
 }
 
-.footer-lankar {
+.footer-links {
   display: flex;
   gap: 24px;                        
 }
 
-.footer-lankar a {
+.footer-links a {
   color: white;
   text-decoration: none;            
 }
 
-.footer-lankar a:hover {
+.footer-links a:hover {
   text-decoration: underline;
 }
 

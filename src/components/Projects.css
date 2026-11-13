@@ -1,20 +1,20 @@
-.projekt {
+.projects {
   padding: 64px 32px;
   background: transparent;
 }
 
-.projekt h2 {
+.projects h2 {
   font-size: 32px;
   margin: 0 0 32px;
 }
 
-.projekt-lista {
+.project-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 }
 
-.sortera-projekt {
+.sort-projects {
   height: 30px;
   background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -22,19 +22,19 @@
 }
 
 @media (max-width: 800px) {
-  .projekt-lista {
+  .project-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .projekt {
+  .projects {
     padding: 40px 20px;
   }
 }
 
 @media (max-width: 500px) {
-  .projekt-lista {
+  .project-list {
     grid-template-columns: 1fr;
   }
 }

@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 import "./Todo.css"
-import Knapp from "./Knapp";
+import Knapp from "./Button";
 import { useState } from "react";
 
 function loadTodos() {
@@ -53,7 +53,7 @@ function Todo() {
 
       {todos.length === 0 && <p>Inget att göra än.</p>}
 
-      <ul className="todo-lista">
+      <ul className="todo-list">
         {todos.map((todo) => (
           <TodoItem 
           key={todo.id}

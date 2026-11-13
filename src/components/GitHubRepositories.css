@@ -7,7 +7,7 @@
   color: white;
 }
 
-.github-lista {
+.github-list {
   list-style: none;
   padding: 0;
   display: grid;
@@ -15,17 +15,17 @@
   gap: 1rem;
 }
 
-.github-kort {
+.github-card {
   padding: 1rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.15);
 }
 
-.github-kort a {
+.github-card a {
   color: #ffd9bf;
 }
 
-.github-sprak {
+.github-language {
   background: #edb18b;
   color: #222;
   padding: 0.2rem 0.6rem;
@@ -33,6 +33,6 @@
   font-size: 0.8rem;
 }
 
-.github-fel {
+.github-error {
   color: #e96652;
 }

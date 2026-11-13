@@ -1,4 +1,4 @@
-.statistik {
+.statistics {
   max-width: 400px;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -11,13 +11,13 @@
   }
 }
 
-.statistik-lista {
+.statistics-list {
   list-style: none;
   padding: 0;
   margin: 1rem 0 0;
 }
 
-.statistik-rad {
+.statistics-row {
   display: grid;
   grid-template-columns: 90px 1fr 50px;
   align-items: center;
@@ -26,14 +26,14 @@
   text-align: left;
 }
 
-.statistik-bakgrund {
+.statistics-background {
   height: 14px;
   border-radius: 7px;
   background: rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 
-.statistik-stapel {
+.statistics-bar {
   height: 100%;
   background: #edb18b;
   border-radius: 7px;

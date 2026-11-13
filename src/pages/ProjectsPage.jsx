@@ -1,4 +1,4 @@
-import Projekt from "../components/Projekt";
+import Projekt from "../components/Projects";
 
 function ProjektSida() {
   return <Projekt />;

@@ -1,4 +1,4 @@
-.projekt-bild {
+.project-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
@@ -8,24 +8,24 @@
 
 }
 
-.projekt-kort {
+.project-card {
   border-radius: 8px;
   background: transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.projekt-info {
+.project-info {
   padding: 20px;
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
-.knapp {
+.button {
   margin: 0 4rem;
 }
 
-.projekt-taggar {
+.project-tags {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-.projekt-filter {
+.project-filter {
   display: flex;
   flex-wrap: wrap;                      /* knapparna radbryts på mobil */
   justify-content: center;
@@ -41,7 +41,7 @@
   margin-bottom: 20px;
 }
 
-.filter-knapp {
+.filter-button {
   min-height: 44px;                     /* lätt att träffa med tummen */
   padding: 8px 16px;
   border: 2px solid #7e502b;
@@ -54,16 +54,16 @@
   cursor: pointer;
 }
 
-.filter-knapp:hover {
+.filter-button:hover {
   background-color: #ede9f6;
 }
 
-.filter-knapp.aktiv {
+.filter-button.active {
   background-color: #7e502b;            /* den valda knappen är ifylld */
   color: #fcf6fa;
 }
 
-.projekt-sok {
+.project-search {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -73,7 +73,7 @@
   font-weight: 600;
 }
 
-.projekt-sok input {
+.project-search input {
   padding: 10px 12px;
   border: 1px solid #d8d3bf;
   background: rgba(0, 0, 0, 0.35);
@@ -82,13 +82,13 @@
   font: inherit;
 }
 
-.projekt-antal {
+.project-count {
   margin-bottom: 24px;
   color: #fff;
   font-size: 14px;
 }
 
-.projekt-tom {
+.project-empty {
   padding: 32px;
   border-radius: 8px;
   background-color: #ffffff;

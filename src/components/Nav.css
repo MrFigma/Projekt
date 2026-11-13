@@ -21,26 +21,26 @@
   object-fit: cover;
 }
 
-.lankar {
+.links {
   display: flex;
   gap: 24px;
 }
 
-.lankar a {
+.links a {
   color: #fff;
   text-decoration: none;
 }
 
-.lankar a:hover {
+.links a:hover {
   text-decoration: underline;
 }
 
-.lankar a.active {
+.links a.active {
   font-weight: 700;
   border-bottom: 2px solid currentColor;
 }
 
-.meny-knapp {
+.menu-button {
   display: none;
   width: 44px;
   height: 44px;
@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.navbar .MorkKnapp {
+.navbar .dark-mode-button {
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -63,17 +63,17 @@
   margin-right: -12px;
 }
 
-.navbar .MorkKnapp span {
+.navbar .dark-mode-button span {
   font-size: 23px;
   line-height: 1;
 }
 
 @media (max-width: 700px) {
-  .meny-knapp {
+  .menu-button {
     display: block;
   }
 
-  .lankar {
+  .links {
     display: none;
     position: absolute;
     top: 100%;
@@ -85,15 +85,15 @@
     background-color: #bd8581;
   }
 
-  .app.morkt .lankar {
+  .app.dark .links {
     background-color: rgb(27, 30, 75);
   }
 
-  .lankar.oppen {
+  .links.open {
     display: flex;
   }
 
-  .lankar a {
+  .links a {
     padding: 14px 32px;
   }
 }

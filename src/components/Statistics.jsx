@@ -1,4 +1,4 @@
-import "./Statistik.css"
+import "./Statistics.css"
 import { useState, useEffect } from "react";
 
 
@@ -26,22 +26,22 @@ function Statistik() {
   const totalt = projektLista.length;
 
   return (
-    <section className="statistik">
+    <section className="statistics">
       <h3>Detta har jag använt mest</h3>
 
-      <ul className="statistik.lista">
+      <ul className="statistics-list">
         {lista.map(([namn, antalet]) => {
           const procent = Math.round((antalet / totalt) * 100);
 
           return (
-            <li key={namn} className="statistik-rad">
-              <span className="statistik-namn">{namn}</span>
-              <div className="statistik-backgrund">
-                <div className="statistik-stapel"
+            <li key={namn} className="statistics-row">
+              <span className="statistics-name">{namn}</span>
+              <div className="statistics-background">
+                <div className="statistics-bar"
                   style={{ width: procent + "%" }}
                 ></div>
               </div>
-              <span className="statistik-procent"> {procent} %</span>
+              <span className="statistics-percentage"> {procent} %</span>
             </li>
           );
         })}

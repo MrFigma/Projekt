@@ -1,9 +1,9 @@
-.vader {
+.weather {
   text-align: center; 
 }
 
 
-.vader-lista {
+.weather-list {
   display: flex;               
   flex-wrap: wrap;             
   justify-content: center;     
@@ -12,7 +12,7 @@
 }
 
 
-.vader-kort {
+.weather-card {
   width: 160px;                
   margin: 0;
   padding: 1rem;
@@ -23,7 +23,7 @@
   color: #fff;
 }
 
-.stad-val {
+.city-select {
   height: 30px;
   background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);

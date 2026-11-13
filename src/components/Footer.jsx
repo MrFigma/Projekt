@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="footer">
         <p>© {år} {NAME}</p>
-      <div className="footer-lankar">
+      <div className="footer-links">
         <Link to="/">Hem</Link>
         <a href="https://www.linkedin.com/in/markus-andersson-863908313/">LinkedIn</a>
         <a href="https://github.com/MrFigma">Github</a>

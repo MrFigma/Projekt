@@ -1,13 +1,13 @@
 import './Hero.css';
 import { NAME } from '../data/settings';
 import heroBild from '../assets/HomeImage.jpg';
-import Knapp from './Knapp';
+import Knapp from './Button';
 import { halsning } from '../utils/text';
 
 function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero-innehall">
+      <div className="hero-content">
         <p className="hero-intro">{halsning()} jag heter {NAME}!</p>
         <h2 id="hero-title">Jag lär mig att bygga för webben.</h2>
         <p className="hero-text">
@@ -16,7 +16,7 @@ function Hero() {
         </p>
         <Knapp text="Projekt" lank="/projekt" />
       </div>
-      <img className="hero-bild" 
+      <img className="hero-image"
         src={heroBild} 
         alt="Utsickt över fält och berg rakt ur Lord of the rings filmerna" 
       />

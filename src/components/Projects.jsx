@@ -1,5 +1,5 @@
-import "./Projekt.css";
-import ProjektKort from "./ProjektKort";
+import "./Projects.css";
+import ProjektKort from "./ProjectCard";
 import bild1 from "../assets/FloatingMonastery.jpg";
 import bild2 from "../assets/DarkHedges.jpg";
 import bild3 from "../assets/ForestOfPeaks.jpg";
@@ -20,7 +20,7 @@ function Projekt() {
   const [vald, setVald] = useState("Alla");
   const [sok, setSok] = useState("");
   const [sortering, setSortering] = useState("standard")
-  const [error, setError] = useState("")
+  const [fel, setFel] = useState("")
   
   useEffect(() => {
     async function hamtaProjekt() {
@@ -39,7 +39,7 @@ function Projekt() {
       }
       setProjektLista((prev) => prev.filter((p) => p.id !== id));
     } catch {
-      setError("Kunde inte ta bort projektet. Är servern igång?");
+      setFel("Kunde inte ta bort projektet. Är servern igång?");
     }
   }
 
@@ -70,14 +70,14 @@ function Projekt() {
   }
 
   return (
-    <section className="projekt" id="projekt">
+    <section className="projects" id="projekt">
       <h2>Mina projekt</h2>
       
-      <div className="projekt-filter">
+      <div className="project-filter">
         {filterLista.map((f) => (
             <button
             key={f}
-            className={f === vald ? "filter-knapp aktiv" : "filter-knapp"}
+            className={f === vald ? "filter-button active" : "filter-button"}
             onClick={() => setVald(f)}
             aria-pressed={f === vald}
           >
@@ -86,7 +86,7 @@ function Projekt() {
         ))}
       </div>
 
-      <label className="projekt-sok">
+      <label className="project-search">
         Sök projekt
         <input
           type="search"
@@ -96,7 +96,7 @@ function Projekt() {
         />
       </label>
 
-      <select className="sortera-projekt" 
+      <select className="sort-projects" 
         value={sortering} 
         onChange={(e) => setSortering(e.target.value)}
       >
@@ -106,14 +106,14 @@ function Projekt() {
       </select>
 
 
-      <p className="projekt-antal">
+      <p className="project-count">
         Visar {synligaProjekt.length} av {projektLista.length} projekt
       </p>
 
         {synligaProjekt.length === 0 ? (
-          <p className="projekt-tom">Inga projekt matchar. Prova annat filter</p>
+          <p className="project-empty">Inga projekt matchar. Prova annat filter</p>
         ) : (
-          <div className="projekt-lista">
+          <div className="project-list">
             {sorteradeProjekt.map((p) => (
             <ProjektKort
               key={p.id}

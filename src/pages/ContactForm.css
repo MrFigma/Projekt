@@ -1,4 +1,4 @@
-.kontakt-form input {
+.contact-form input {
   width: 80%;
   height: 32px;
   padding: 8px 12px;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.kontakt-form textarea {
+.contact-form textarea {
   width: 80%;
   min-height: 160px;
   padding: 12px;
@@ -16,6 +16,6 @@
   resize: vertical;
 }
 
-.tecken-kvar.Varning {
+.characters-left.warning {
   color: red;
 }

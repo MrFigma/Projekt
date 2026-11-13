@@ -33,7 +33,7 @@ function ProjektDetalj() {
   const { titel, text, teknik } = projekt;
 
   return (
-    <section className="projekt-detalj">
+    <section className="project-detail">
       <h2>{titel}</h2>
       <p>{text}</p>
       <ul>

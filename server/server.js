@@ -1,11 +1,16 @@
 import express from "express";
 import cors from "cors";
-import { projektLista } from "./projekt.js";
+import { projektLista } from "./projects.js";
 
 const app = express();
 const PORT = 3001;
 
 app.use(cors());
+
+app.use((req, res, next) => {
+  console.log(new Date().toLocaleTimeString("sv-SE"), req.method, req.url);
+  next();
+});
 
 app.get("/hej", (req, res) => {
   res.json({
@@ -50,7 +55,7 @@ app.delete("/projekt/:id", (req, res) => {
 
   projektLista.splice(index, 1);
   res.status(204).end();
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Servern körs på http://localhost:${PORT}`);

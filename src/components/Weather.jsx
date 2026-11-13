@@ -1,6 +1,6 @@
-import "./Vader.css";
+import "./Weather.css";
 import { useState, useEffect } from "react";
-import stader from "../data/stader.json";
+import stader from "../data/cities.json";
 
 const BAS_URL = "https://api.open-meteo.com/v1/forecast";
 
@@ -38,10 +38,10 @@ function Vader() {
   }, [valdStad]);
 
   return (
-    <section className="vader">
+    <section className="weather">
       <h2>Vädret just nu</h2>
 
-      <select className="stad-val" value={valdStad} onChange={(e) => setValdStad(e.target.value)}>
+      <select className="city-select" value={valdStad} onChange={(e) => setValdStad(e.target.value)}>
         {stader.map((stad) => (
           <option key={stad.namn} value={stad.namn}>{stad.namn}</option>
         ))}
@@ -50,7 +50,7 @@ function Vader() {
       {laddar && <p>Laddar vädret...</p>}
       {fel && <p role="alert">{fel}</p>}
       {vader && !laddar && (
-        <p className="vader-kort">
+        <p className="weather-card">
           {valdStad}: {vader.temp} °C, {vader.vind} km/h
         </p>
       )}

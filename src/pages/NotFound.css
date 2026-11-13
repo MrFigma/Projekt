@@ -1,22 +1,22 @@
-.ej-hittad {
+.not-found {
   padding: 96px 32px;
 }
 
-.ej-hittad-kod {
+.not-found-code {
   font-size: 96px;
   font-weight: 800;
   color: #261f3a;
   line-height: 1;
 }
 
-.ej-hittad-knappar {
+.not-found-buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-top: 32px;
 }
 
-.ej-hittad-knappar button {
+.not-found-buttons button {
   padding: 12px 24px;
   border: 2px solid #261f3a;
   border-radius: 10px;

@@ -1,4 +1,4 @@
-import Knapp from "./Knapp"
+import Knapp from "./Button"
 import "./Todo.css"
 
 function TodoItem({text, onRemove}) {

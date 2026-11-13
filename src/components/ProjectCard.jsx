@@ -1,6 +1,6 @@
-import "./ProjektKort.css";
-import "./Knapp.css";
-import Knapp from "./Knapp";
+import "./ProjectCard.css";
+import "./Button.css";
+import Knapp from "./Button";
 import { Link } from "react-router-dom";
 
 function ProjektKort({ titel, text, bild, id, teknik, lank, tabort }) {
@@ -8,16 +8,16 @@ function ProjektKort({ titel, text, bild, id, teknik, lank, tabort }) {
   const anvanderReact = teknik.some((t) => t === "React");
 
   return (
-    <article className="projekt-kort">
-      <img className="projekt-bild" src={bild} alt="" />
-      <div className="projekt-info">
+    <article className="project-card">
+      <img className="project-image" src={bild} alt="" />
+      <div className="project-info">
         <h3>{titel}</h3>
 
-        {anvanderReact && <span className="react-etikett">Använder React</span>}
+        {anvanderReact && <span className="react-label">Använder React</span>}
 
         <p>{text}</p>
 
-        <ul className="projekt-taggar">
+        <ul className="project-tags">
           {teknik.map ((t) =>(
             <li key={t}>{t}</li>
           ))}

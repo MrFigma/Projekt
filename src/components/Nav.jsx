@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
-import "./Knapp.css";
-import heroBild from "../assets/LogoBild.jpg";
-import Knapp from "./Knapp";
+import "./Button.css";
+import heroBild from "../assets/LogoImage.jpg";
+import Knapp from "./Button";
 
 function Navbar({ mork, setMork }) {
   const [oppen, setOppen] = useState(false);
@@ -23,7 +23,7 @@ function Navbar({ mork, setMork }) {
       </span>
 
       <button
-        className="meny-knapp"
+        className="menu-button"
         type="button"
         onClick={() => setOppen(!oppen)}
         aria-expanded={oppen}
@@ -35,7 +35,7 @@ function Navbar({ mork, setMork }) {
 
       <div
         id="huvudmeny"
-        className={oppen ? "lankar oppen" : "lankar"}>
+        className={oppen ? "links open" : "links"}>
 
         <NavLink to="/" end onClick={stang}>Hem</NavLink>
         <NavLink to="/om-mig" onClick={stang}>Om mig</NavLink>
@@ -45,7 +45,7 @@ function Navbar({ mork, setMork }) {
       </div>
 
       <Knapp
-        className="MorkKnapp"
+        className="dark-mode-button"
         text={
           <span style={{ color: mork ? "yellow" : "white" }}>
             ☾

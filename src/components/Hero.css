@@ -9,12 +9,12 @@
     color: #3e3a4e;
 }
 
-.hero-innehall {
+.hero-content {
     min-width: 0;
     color: #fff;
 }
 
-.hero-bild{
+.hero-image{
     display: block;
     width: 100%;
     height: auto;

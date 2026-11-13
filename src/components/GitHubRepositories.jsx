@@ -1,4 +1,4 @@
-import "./GitHubRepon.css";
+import "./GitHubRepositories.css";
 import { GITHUB_USER } from "../data/settings";
 import { snyggtDatum, kortText } from "../utils/text";
 import { useState, useEffect } from "react";
@@ -35,16 +35,16 @@ function GitHubRepon() {
       <h2>Senast på GitHub</h2>
 
       {laddar && <p>Laddar repon...</p>}
-      {fel && <p className="github-fel" role="alert">{fel}</p>}
+      {fel && <p className="github-error" role="alert">{fel}</p>}
 
-      <ul className="github-lista">
+      <ul className="github-list">
         {repon.map((r) => (
-          <li key={r.id} className="github-kort">
+          <li key={r.id} className="github-card">
             <h3>
               <a href={r.html_url}>{r.name}</a>
             </h3>
             <p>{r.description || "Ingen beskrivning än."}</p>
-            {r.language && <span className="github-sprak">{r.language}</span>}
+            {r.language && <span className="github-language">{r.language}</span>}
             <p>Uppdaterad {snyggtDatum(r.updated_at)}</p>
           </li>
         ))}

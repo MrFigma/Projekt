@@ -1,8 +1,8 @@
-import './Knapp.css';
+import './Button.css';
 
 
 function Knapp({ text, lank, type, onClick, className = "", disabled }) {
-  const knappClassName = `knapp ${className}`.trim();
+  const knappClassName = `button ${className}`.trim();
 
   if (type === "submit" || type === "button") {
     return (
@@ -12,7 +12,7 @@ function Knapp({ text, lank, type, onClick, className = "", disabled }) {
     );
   }
   
-  return <a className="knapp" href={lank}>{text}</a>
+  return <a className="button" href={lank}>{text}</a>
 }
 
 export default Knapp;

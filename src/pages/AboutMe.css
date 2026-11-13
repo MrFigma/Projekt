@@ -1,4 +1,4 @@
-.om-mig {
+.about-me {
   display: grid;
   grid-template-columns: 1fr 1fr;   
   align-items: center;             
@@ -8,33 +8,33 @@
   background-color: transparent;
 }
 
-.om-mig-bild {
+.about-me-image {
   display: block;
   width: 100%;
   height: auto;                     
   border-radius: 8px;
 }
 
-.om-mig h2 {
+.about-me h2 {
   font-size: 32px;
   margin: 0 0 24px;
 }
 
-.om-mig-text {
+.about-me-text {
   max-width: 55ch;                  
   margin: 0 0 24px;
   font-size: 18px;
   line-height: 1.7;
 }
 
-.om-mig h3 {
+.about-me h3 {
   margin: 0 0 16px;
   color: #fff;
   font-size: 20px;
   padding-top: 15px;
 }
 
-.om-mig-lista {
+.about-me-list {
   display: flex;                  
   flex-wrap: wrap;                  
   gap: 12px;
@@ -43,7 +43,7 @@
   list-style: none;                
 }
 
-.om-mig-lista li {
+.about-me-list li {
   padding: 8px 20px;
   border-radius: 999px;             
   background: rgba(0, 0, 0, 0.35);
@@ -53,14 +53,14 @@
 }
 
 @media (max-width: 800px) {
-  .om-mig {
+  .about-me {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 }
 
 @media (max-width: 600px) {
-  .om-mig {
+  .about-me {
     padding: 40px 20px;
   }
 }

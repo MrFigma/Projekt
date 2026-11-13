@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
-import Projekt from "../components/Projekt";
-import GitHubRepon from "../components/GitHubRepon";
-import Vader from "../components/Vader";
+import Projekt from "../components/Projects";
+import GitHubRepon from "../components/GitHubRepositories";
+import Vader from "../components/Weather";
 import Todo from "../components/Todo";
 
 function Hem() {
