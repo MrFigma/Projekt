@@ -6,6 +6,7 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors());
+app.use(express.json());
 
 app.use((req, res, next) => {
   console.log(new Date().toLocaleTimeString("sv-SE"), req.method, req.url);
@@ -43,8 +44,6 @@ app.get("/projekt/:id", (req, res) => {
   res.json(hittat);
 });
 
-
-
 app.delete("/projekt/:id", (req, res) => {
   const id = Number(req.params.id);
   const index = projektLista.findIndex((p) => p.id === id);
@@ -55,6 +54,25 @@ app.delete("/projekt/:id", (req, res) => {
 
   projektLista.splice(index, 1);
   res.status(204).end();
+});
+
+
+
+const meddelande = [];
+
+app.post("/kontakt", (req, res) => {
+  const {namn, email, text} = req.body;
+  if (typeof text !== "string" || text.trim() === "") {
+    return res.status(400).json({ fel: "Meddelandet får inte vara tomt."})
+  }
+  if (text.length > 500) {
+    return res.status(400).json({ fel: " Meddelandet får högst vara 500 tecken."})
+  }
+
+  meddelande.push({namn, email, text});
+  console.log(`${namn} skrev: ${text}`);
+
+  res.status(201).json({meddelande: "Tack!"});
 });
 
 app.listen(PORT, () => {
