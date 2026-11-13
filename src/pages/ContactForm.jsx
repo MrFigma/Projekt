@@ -4,25 +4,28 @@ import "./Contact.css";
 import "./ContactForm.css";
 
 const MAX_TECKEN = 500;
-const SERVER_URL = "http://localhost:3001/kontakt";
+const FORMSPREE_URL = "https://formspree.io/f/DITT_FORM_ID";
 
 function KontaktFormular() {
   const [namn, setNamn] = useState("");
   const [email, setEmail] = useState("");
   const [meddelande, setMeddelande] = useState("");
   const [skickat, setSkickat] = useState(false);
+  const [skickar, setSkickar] = useState(false);
   const [fel, setFel] = useState("");
 
   const kvar = MAX_TECKEN - meddelande.length;
-  const fardigt = meddelande.trim() !== "" && kvar >= 0;
+  const fardigt =
+    namn.trim() !== "" &&
+    email.trim().includes("@") &&
+    meddelande.trim() !== "" &&
+    kvar >= 0;
 
   async function handleSubmit(e) {
     e.preventDefault();
     setFel("");
 
-    const renText = meddelande.trim();
-
-    if (renText === "") {
+    if (meddelande.trim() === "") {
       setFel("Meddelandet får inte vara tomt.");
       return;
     }
@@ -37,21 +40,30 @@ function KontaktFormular() {
       return;
     }
 
+    setSkickar(true);
+
     try {
-      const answer = await fetch(SERVER_URL, {
+      const svar = await fetch(FORMSPREE_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
-          namn: namn.trim(),
+          name: namn.trim(),
           email: email.trim(),
-          text: renText,
+          message: meddelande.trim(),
         }),
       });
 
-      const data = await answer.json();
+      const data = await svar.json();
 
-      if (!answer.ok) {
-        setFel(data.fel || "Servern kunde inte ta emot meddelandet.");
+      if (!svar.ok) {
+        const formulärFel = data.errors
+          ?.map((item) => item.message)
+          .join(", ");
+
+        setFel(formulärFel || "Formuläret kunde inte skickas.");
         return;
       }
 
@@ -59,7 +71,9 @@ function KontaktFormular() {
       setEmail("");
       setMeddelande("");
     } catch {
-      setFel("Kunde inte skicka meddelandet. Kontrollera att servern körs.");
+      setFel("Kunde inte skicka meddelandet. Kontrollera din internetanslutning.");
+    } finally {
+      setSkickar(false);
     }
   }
 
@@ -76,14 +90,17 @@ function KontaktFormular() {
         id="namn"
         required
         value={namn}
+        placeholder="Ditt namn"
         onChange={(e) => setNamn(e.target.value)}
       />
 
       <label htmlFor="email">E-post</label>
       <input
         id="email"
+        type="email"
         required
         value={email}
+        placeholder="namn@exempel.com"
         onChange={(e) => setEmail(e.target.value)}
       />
 
@@ -92,6 +109,7 @@ function KontaktFormular() {
         id="medd"
         required
         value={meddelande}
+        placeholder="Ditt meddelande"
         onChange={(e) => setMeddelande(e.target.value)}
       />
 
@@ -99,7 +117,11 @@ function KontaktFormular() {
         {kvar} tecken kvar!
       </p>
 
-      <Knapp type="submit" text="Skicka" disabled={!fardigt} />
+      <Knapp
+        type="submit"
+        text={skickar ? "Skickar..." : "Skicka"}
+        disabled={!fardigt || skickar}
+      />
     </form>
   );
 }

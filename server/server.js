@@ -61,9 +61,16 @@ app.delete("/projekt/:id", (req, res) => {
 const meddelande = [];
 
 app.post("/kontakt", (req, res) => {
-  const {namn, email, text} = req.body;
-  if (typeof text !== "string" || text.trim() === "") {
-    return res.status(400).json({ fel: "Meddelandet får inte vara tomt."})
+  const {namn, email, text} = req.body ?? {};
+  if (
+    typeof namn !== "string" ||
+    namn.trim() === "" ||
+    typeof text !== "string" ||
+    text.trim() ===  ""
+  ){
+    return res.status(400).json({
+      fel: "Namn och meddelande måste fyllas i",
+    });
   }
   if (text.length > 500) {
     return res.status(400).json({ fel: " Meddelandet får högst vara 500 tecken."})
@@ -73,6 +80,10 @@ app.post("/kontakt", (req, res) => {
   console.log(`${namn} skrev: ${text}`);
 
   res.status(201).json({meddelande: "Tack!"});
+});
+
+app.get("/kontakt", (req, res) => {
+  res.json(meddelande);
 });
 
 app.listen(PORT, () => {

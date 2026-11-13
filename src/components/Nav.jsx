@@ -41,6 +41,7 @@ function Navbar({ mork, setMork }) {
         <NavLink to="/om-mig" onClick={stang}>Om mig</NavLink>
         <NavLink to="/projekt" onClick={stang}>Projekt</NavLink>
         <NavLink to="/kontakt" onClick={stang}>Kontakt</NavLink>
+        <NavLink to="/kontakt-server" onClick={stang}>Kontakt Express</NavLink>
         
       </div>
 
